@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css"> -->
+    <style>
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            cursor: pointer;
+
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .logo {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 30%;
+            border: 0px solid whitesmoke;
+            border-radius: 50px;
+            margin: 3px;
+        }
+
+        .nav-list {
+            width: 60%;
+            /* background-color: black; */
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .nav-list li {
+            list-style: none;
+            padding: 16px 8px;
+        }
+
+        .nav-list li a:hover {
+            text-decoration: none;
+            color: green;
+        }
+
+        .rightnav {
+            /* background-color: black; */
+            text-align: right;
+            width: 30%;
+            padding: 3px 9px;
+            margin: auto;
+        }
+
+        #search {
+            padding: 0px;
+            margin: 33px;
+            font-size: 15px;
+            border: 5px solid black;
+            border-radius: 11px;
+
+        }
+
+        .btn btn-sm {
+            padding: 5px;
+            border: 3px;
+
+        }
+
+        .background {
+            background: rgba(0, 0, 0, 0.7) url('../img7.jpeg');
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+
+        .box-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            max-width: 50%;
+            margin: auto;
+            height: 90%;
+        }
+
+        .firstsection {
+            height: 100vh;
+        }
+
+        .firsthalf {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .secondhalf {
+            width: 30%;
+
+        }
+
+        .textbig {
+            font-size: 25px;
+            padding: 50px 0px;
+        }
+
+        .textsmall {
+            font-size: 20px;
+            ;
+        }
+
+        .btn {
+            padding: 6px 18px;
+            margin: 6px 0;
+            border: 2px solid white;
+            border-radius: 9px;
+            background: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn-sm {
+            padding: 7px 16px;
+            vertical-align: middle;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            max-width: 70%;
+            margin: auto;
+            font-family: 'Lobster', cursive;
+            padding: 10px;
+        }
+
+        .imgFluid {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .paras {
+            padding: 0px 98px;
+
+        }
+
+        .secLeft {
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            max-width: 70%;
+            margin: auto;
+            flex-direction: row-reverse;
+        }
+
+        .sectionsubtag {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .contact {
+            background-color: #e7ebef;
+            height: 700px;
+        }
+
+        .form {
+            max-width: 60%;
+            margin: 25px auto;
+        }
+
+        .text-center {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .form-input {
+            width: 100%;
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+            border: 2px solid;
+            border-radius: 6px;
+            margin: 17px 0;
+            padding: 6px 0;
+        }
+
+        .btn-dark {
+            color: rgb(24, 20, 20);
+            border: 2px solid rgb(14, 12, 12);
+            border-radius: 6px;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 9px 13px;
+        }
+
+        .text-footer {
+            text-align: center;
+            font-size: 16px;
+            color: white;
+            padding: 30px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .burger {
+            position: absolute;
+            right: 5%;
+            top: 15%;
+            cursor: pointer;
+            display: none;
+        }
+
+        .line {
+            background-color: white;
+            width: 33px;
+            height: 4px;
+            margin: 5px 5px;
+        }
+
+        @media only screen and (max-width:1176px) {
+            .nav-list {
+                flex-direction: column;
+            }
+
+            .navbar {
+                flex-direction: column;
+                height: 479px;
+                transition: all 0.7s ease-out;
+            }
+
+            .box-main {
+                flex-direction: column-reverse;
+                max-width: 100%;
+            }
+
+            .rightnav {
+                text-align: center;
+            }
+
+            #search {
+                width: 100%;
+            }
+
+            .burger {
+                display: block;
+            }
+
+            .h-nav-resp {
+                height: 72px;
+            }
+
+            .v-class-resp {
+                opacity: 0;
+            }
+
+            .section {
+                flex-direction: column-reverse;
+            }
+
+            .textsmall {
+                text-align: center;
+            }
+
+            .textbig {
+                text-align: center;
+            }
+
+            .btn {
+                text-align: center;
+            }
+
+            .paras {
+                padding: 0px;
+            }
+        }
+
+        #services {
+            margin: 34px;
+            display: flex;
+        }
+
+        #services .box {
+            border: 2px solid brown;
+    padding: 50px;
+    margin: 38px 110px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 40px;
+        }
+
+        #services .box img {
+            height: 70px;
+            margin: auto;
+            display: block;
+        }
+
+        #services .box p {
+            font-family: 'Bree Serif', serif;
+
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar background h-nav-resp">
+        <ul class="nav-list v-class-resp">
+            <div class="logo"><img src="img5.jpeg" alt=""></div>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#article">Article</a></li>
+        </ul>
+        <div class="rightnav v-class-resp">
+            <input type="text" name="search" id="search">
+            <button class="btn btn-sm">search</button>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    <section class="background firstsection">
+        <div class="box-main">
+            <div class="firsthalf">
+                <p class="textbig">
+                    Education is the passport to the future, for tomorrow belongs to those who prepare for it today. –
+                    Malcolm X
+                </p>
+                <p class="textsmall">
+
+                </p>
+                <div class="button">
+                    <button class="btn">Subscribe</button>
+                    <button class="btn">Follow</button>
+                </div>
+            </div>
+            <div class="secondhalf">
+
+            </div>
+        </div>
+    </section>
+    <section id="services-container">
+        <h1 class="h-primary center">Featured</h1>
+        <div id="services">
+            <div class="box">
+                <img src="img8.jpeg" alt="">
+                <h2 class="h-secondary center"><a href="index2.html">Scholar</a></h2>
+                <p class="center"></p>
+            </div>
+            <div class="box">
+                <img src="img8.jpeg" alt="">
+                <h2 class="h-secondary center"><a href="index2.html">Research Guide</a></h2>
+                <p class="center"></p>
+            </div>
+            <div class="box">
+                <img src="img8.jpeg" alt="">
+                <h2 class="h-secondary center"><a href="index3.html">Admin</a></h2>
+                <p class="center"></p>
+            </div>
+        </div>
+    </section>
+    </section>
+    <section class="contact" id="contact">
+        <h3 class="text-center">Contact Us</h3>
+        <div class="form">
+            Usrname : <input class="form-input" type="text" name="name" id="id" placeholder="Enter your name">
+            Email : <input class="form-input" type="email" name="email" id="email" placeholder="Enter your email">
+            Phone : <input class="form-input" type="number" name="number" id="number"
+                placeholder="Enter your phone number">
+            <textarea class="form-input" name="text" id="text" cols="30" rows="10"
+                placeholder="Enter the concern"></textarea>
+            <button class="btn btn-dark">Submit</button>
+        </div>
+    </section>
+    <footer class="background">
+        <p class="text-footer">
+            copyright &copy; 2022 - www.futureyou.com - All rights reserved
+        </p>
+    </footer>
+    <script src="js/resp.js"></script>
+</body>
+
+</html>
